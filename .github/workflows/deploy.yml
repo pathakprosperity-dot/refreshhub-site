@@ -1,5 +1,8 @@
 name: Deploy to Pages
-on: [push]
+on: 
+push:
+    branches:
+      - main        # ← if your default branch is named “main”
 jobs:
   deploy:
     runs-on: ubuntu-latest
