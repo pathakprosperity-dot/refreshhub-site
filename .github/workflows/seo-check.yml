@@ -1,0 +1,12 @@
+name: SEO & Lighthouse
+on: [pull_request]
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          configPath: .lighthouserc.js
+          uploadArtifacts: false
