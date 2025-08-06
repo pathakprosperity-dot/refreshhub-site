@@ -1,14 +1,25 @@
 name: Deploy to Pages
-on: 
-push:
+
+on:
+  push:
     branches:
-      - main        # ← if your default branch is named “main”
+      - main    # or "master" if that’s your default branch
+
+permissions:
+  contents: write  # allows the action to push to gh-pages
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: peaceiris/actions-gh-pages@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # needed so the gh-pages action can push
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
