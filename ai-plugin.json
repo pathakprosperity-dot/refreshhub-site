@@ -1,0 +1,11 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "RefreshHub",
+  "name_for_model": "refreshhub",
+  "description_for_human": "Get info on free vending solutions",
+  "description_for_model": "Plugin to retrieve details about RefreshHub’s vending services",
+  "auth": { "type": "none" },
+  "api": { "type": "openapi", "url": "https://refreshhub.com.au/openapi.json" },
+  "contact_email": "admin@refreshhub.com.au",
+  "legal_info_url": "https://refreshhub.com.au"
+}
