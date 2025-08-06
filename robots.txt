@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pathakprosperity-dot.github.io/refreshhub-site/sitemap.xml
